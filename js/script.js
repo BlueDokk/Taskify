@@ -1,5 +1,5 @@
 import { Admin } from './modules/adminUser.js';
-import { Standard } from './modules/StandardUser.js';
+import { Standard } from './modules/standardUser.js';
 import { nav } from './modules/navbar.js'
 
 

@@ -171,16 +171,17 @@ const dataForm = {
 	showPassword() {
 
 		let inputPassword = document.getElementById('password');
+		let iconPassword = document.getElementById('password-icon');
 
 		if (inputPassword.type === 'password') {
 			inputPassword.type = 'text';
-			this.classList.remove('fa-eye');
-			this.classList.add('fa-eye-slash');
+			console.log(this);
+			iconPassword.setAttribute('href', './images/sprite.svg#eye-slash');
 
 		} else {
 			inputPassword.type = 'password';
-			this.classList.add('fa-eye');
-			this.classList.remove('fa-eye-slash');
+			iconPassword.setAttribute('href', './images/sprite.svg#eye');
+
 		}
 	},
 

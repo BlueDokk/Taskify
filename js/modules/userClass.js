@@ -42,7 +42,7 @@ const getProfileHtml = function (user) {
                     <source type="image/webp"
                         srcset="../images/resized/user.webp 1x, ../images/resized/user@2x.webp 2x" />
                     <source type="image/png" srcset="../images/resized/user.png 1x, ../images/resized/user@2x.png 2x" />
-                    <img src="../images/resized/user.png" alt="User image" />
+                    <img class="user__image" src="../images/resized/user.png" alt="User image" />
                 </picture>
     <div class="user__name">
         <h3 class="text--primary">${user.name} ${user.lastname}</h3>

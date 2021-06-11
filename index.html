@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taskify</title>
 
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <meta name="author" content="Javier Velasquez">
     <meta name="description" content="Website of Taskify project">
     <meta property="og:title" content="Taskify">
@@ -60,9 +61,16 @@
         </div>
 
         <div class="grid--col">
+
             <div class="block__image">
-                <img src="./images/banner.png" alt="Robot image banner">
+                <picture>
+                    <source type="image/webp"
+                        srcset="./images/resized/banner.webp 1x, ./images/resized/banner@2x.webp 2x" />
+                    <source type="image/png" srcset="./images/resized/banner.png 1x, ./images/resized/banner@2x.png 2x" />
+                    <img src="./images/resized/banner.png" alt="Robot image banner" />
+                </picture>
             </div>
+            
         </div>
 
     </section>

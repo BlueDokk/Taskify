@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taskify</title>
+
+    <!-- FONTS FROM GOOGLE -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Iceland&family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a class="navbar__brand" href="/">
+                <h2 class="text--title">Taskify</h2>
+            </a>
+            <div class="icon navbar__toggler">
+                <img src="../images/bars-solid.svg" alt="" class=>
+            </div>
+            <ul class="list navbar__list collapsible__content">
+                <li class="navbar__item"><a href="#">Home</a></li>
+                <li class="navbar__item"><a href="#">About us</a></li>
+                <li class="navbar__item"><a id="log-out" href="#">Log out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="grid grid--user">
+        <div class="grid--col">
+
+            <div id="block-user" class="block user animated fadeIn"></div>
+
+        </div>
+        <div id="block-task" class="block block--task grid--col">
+
+        </div>
+    </section>
+
+    <footer class="block footer footer--user animated fadeIn">
+        <ul class="list text--dark">
+            <li class="list__item"><a href="#">About</a></li>
+            <li class="list__item"><a href="#">Help</a></li>
+            <li class="list__item"><a href="#">More</a></li>
+        </ul>
+        <p class="footer__text text--dark text--center">Copyright &copy; 2021 Taskify</p>
+    </footer>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyA3_xZyZ6RsVyPM66tAadJCORnFiatbN1g",
+            authDomain: "taskify-624cb.firebaseapp.com",
+            projectId: "taskify-624cb",
+            storageBucket: "taskify-624cb.appspot.com",
+            messagingSenderId: "631769738651",
+            appId: "1:631769738651:web:78b3655c8e28bc582f453e"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    
+    <script type="module" src="../js/script.js"></script>
+</body>
+
+</html>

@@ -1,6 +1,6 @@
-import {Admin} from './modules/adminUser.js';
-import {Standard} from './modules/StandardUser.js';
-import {nav} from './modules/navbar.js'
+import { Admin } from './modules/adminUser.js';
+import { Standard } from './modules/StandardUser.js';
+import { nav } from './modules/navbar.js'
 
 
 // Global variable of Cloud FireStore.
@@ -25,22 +25,24 @@ const app = {
 
         let logOut = document.getElementById('log-out');
 
-        logOut.addEventListener('click', () => {
+        if (logOut !== null) {
+            logOut.addEventListener('click', () => {
 
-            // Confirm log out.
-            let outAccount = confirm('Do you want to log out?');
+                // Confirm log out.
+                let outAccount = confirm('Do you want to log out?');
 
-            if (outAccount) {
-                firebase.auth().signOut().then(() => {
-                    // Sign-out successful.
-                    console.log('sign-out succeddful');
-                }).catch((error) => {
-                    // An error happened.
-                    console.log(error);
-                });
-            }
+                if (outAccount) {
+                    firebase.auth().signOut().then(() => {
+                        // Sign-out successful.
+                        console.log('sign-out succeddful');
+                    }).catch((error) => {
+                        // An error happened.
+                        console.log(error);
+                    });
+                }
 
-        });
+            });
+        }
     },
 
     // Check if there is an active session.
@@ -71,7 +73,7 @@ const app = {
 
                     // Create a user with the Admin class.
                     this.dataUser = new Admin(doc.data());
-        
+
                 }
                 if (doc.data().userType === 'standard') {
 

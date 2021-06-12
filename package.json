@@ -1,12 +1,20 @@
 {
   "name": "Taskify",
   "version": "1.0.0",
-  "description": "",
+  "description": "\"# Taskify\" \r \"# Taskify\"",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlueDokk/Taskify.git"
+  },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BlueDokk/Taskify/issues"
+  },
+  "homepage": "https://github.com/BlueDokk/Taskify#readme"
 }

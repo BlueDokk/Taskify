@@ -411,6 +411,7 @@ h3 {
   text-align: center;
   margin: 1rem 0;
   display: none;
+  width: 30rem;
 }
 
 .form__input-error-active {

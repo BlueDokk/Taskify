@@ -409,7 +409,7 @@ h3 {
   color: var(--color-alert);
   font-size: 1.4rem;
   text-align: center;
-  margin: 1rem 0;
+  margin: 1rem auto;
   display: none;
   width: 30rem;
 }
@@ -469,6 +469,8 @@ h3 {
 }
 
 .form__validation-state {
+  width: 1.5rem;
+  height: 1.5rem;
   position: absolute;
   right: -2rem;
   top: 1.2rem;

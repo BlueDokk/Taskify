@@ -32,7 +32,7 @@ const dataForm = {
 
 		// Get elements of input groups.
 		let formGroup = document.getElementById(`group-${field}`);
-		let formIcon = document.querySelector(`#group-${field} .form__validation-state`);
+		let formIcon = document.querySelector(`#group-${field} #icon-${field}`);
 		let formMessage = document.querySelector(`#error-${field} p`);
 		let errorMessage = document.getElementById('error-message');
 
@@ -43,9 +43,13 @@ const dataForm = {
 				// Add class correct on input group.
 				formGroup.classList.remove('form__group-incorrect');
 				formGroup.classList.add('form__group-correct');
-				formIcon.classList.remove('fa-times-circle');
-				formIcon.classList.add('fa-check-circle');
 				formMessage.classList.remove('form__input-error-active');
+
+				if (window.location.href.includes('account')) {
+					formIcon.setAttribute('href', '../images/sprite.svg#check');
+				} else {
+					formIcon.setAttribute('href', './images/sprite.svg#check');
+				}
 
 				// Add validation result.
 				this.fields[field] = true;
@@ -61,10 +65,15 @@ const dataForm = {
 				// Add class incorrect on input group.
 				formGroup.classList.add('form__group-incorrect');
 				formGroup.classList.remove('form__group-correct');
-				formIcon.classList.add('fa-times-circle');
-				formIcon.classList.remove('fa-check-circle');
 				formMessage.classList.add('form__input-error-active');
 				errorMessage.style.display = 'block';
+
+				if (window.location.href.includes('account')) {
+					formIcon.setAttribute('href', '../images/sprite.svg#error');
+				} else {
+					formIcon.setAttribute('href', './images/sprite.svg#error');
+				}
+
 				this.fields[field] = false;
 			}
 		}

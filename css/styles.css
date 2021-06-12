@@ -242,13 +242,9 @@ h3 {
 }
 
 .navbar__item > a {
-  color: rgba(255, 255, 255, 0.8);
+  color: #fff;
   transition: color 0.3s;
   font-size: 1.5rem;
-}
-
-.navbar__item > a:hover {
-  color: #fff;
 }
 
 .navbar__toggler {

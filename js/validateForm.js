@@ -175,7 +175,6 @@ const dataForm = {
 
 		if (inputPassword.type === 'password') {
 			inputPassword.type = 'text';
-			console.log(this);
 			iconPassword.setAttribute('href', './images/sprite.svg#eye-slash');
 
 		} else {

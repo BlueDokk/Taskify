@@ -229,8 +229,12 @@ const dataForm = {
 				// Signed in
 				user.userCredential = userCredential.user.uid;
 				dataForm.resetFields(dataForm.form);
-				// redirect to user view.
-				location.href = `../pages/user.html`;
+
+				if (window.origin.includes('github.io')) {
+					location.href = `${window.origin}/Taskify/pages/user.html`;
+				} else {
+					location.href = `../pages/user.html`;
+				}
 
 			})
 			.catch((error) => {

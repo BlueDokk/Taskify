@@ -53,7 +53,11 @@ const app = {
                 app.getDataUser(user.uid);
             } else {
                 // Redirect to login view.
-                location.href = `../index.html`;
+                if (window.origin.includes('github.io')) {
+                    location.href = `${window.origin}/Taskify`;
+                } else {
+                    location.href = `../index.html`;
+                }
             }
         });
     },

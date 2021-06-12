@@ -233,7 +233,7 @@ const dataForm = {
 				if (window.origin.includes('github.io')) {
 					location.href = `${window.origin}/Taskify/pages/user.html`;
 				} else {
-					location.href = `${window.origin}/pages/user.html`;
+					location.href = `../pages/user.html`;
 				}
 
 			})

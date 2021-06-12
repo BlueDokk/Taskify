@@ -53,15 +53,12 @@ const app = {
                 app.getDataUser(user.uid);
             } else {
                 // Redirect to login view.
-                if (window.origin.includes('github.io')) {
-                    location.href = `${window.origin}/Taskify`;
-                } else {
-                    location.href = `${window.origin}`;
-                }
+                location.href = `../index.html`;
             }
         });
     },
 
+    // Get data user from Cloud FireStore
     async getDataUser(credential) {
 
         let docRef = db.collection("users").doc(credential);
@@ -90,5 +87,6 @@ const app = {
     },
 };
 
+// Start application.
 app.startApp();
 

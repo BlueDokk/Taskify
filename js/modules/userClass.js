@@ -73,7 +73,9 @@ const getTaskHtml = function () {
     <div class="task__card">
         <div class="task__header">
             <p class="text--white">${item.taskTitle}</p>
-            <i class="fas fa-times task__icon"></i>
+            <svg class="task__icon">
+  <use href="../images/sprite.svg#times"></use>
+</svg>
         </div>
         <div class="task__body">
             <p class="task__description">${item.taskDescription}</p>

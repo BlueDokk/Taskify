@@ -21,6 +21,7 @@ const dataForm = {
 
 	startForm() {
 
+		this.userActive();
 		// Initialize reading fields in the form.
 		this.readFields();
 		this.iconPassword.addEventListener('click', this.showPassword);
@@ -191,6 +192,19 @@ const dataForm = {
 			iconPassword.setAttribute('href', './images/sprite.svg#eye');
 
 		}
+	},
+
+	userActive() {
+		firebase.auth().onAuthStateChanged(function (user) {
+			if (user) {
+				// Redirect to user view.
+				if (window.origin.includes('github.io')) {
+					location.href = `${window.origin}/Taskify/pages/user.html`;
+				} else {
+					location.href = `../pages/user.html`;
+				}
+			}
+		});
 	},
 
 	// Create account in firebase authentication.

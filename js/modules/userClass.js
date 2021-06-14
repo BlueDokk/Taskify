@@ -105,11 +105,6 @@ export class User {
         this.company = data.company;
         this.userType = data.userType;
         this.userCredential = data.userCredential;
-        // this.coworkers = {
-        //     names = {},
-        //     credentials = {},
-        //     emails = {},
-        // };
         this.coworkers = [];
         this.coworkerCredentials = {};
         this.coworkerNames = {};

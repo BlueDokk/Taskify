@@ -57,7 +57,7 @@ const getProfileHtml = function (user) {
 <div class="user__coworkers">
     <p class="text--dark text--label">Coworkers:</p>
     <ul class="list">${user.coworkers.map(item => `
-    <li>${item}: <span class="credential">${this.coworkerCredentials[item]}</span></li>`).join('')}
+    <li>${item}: <br><span class="credential">${this.coworkerEmails[item]}</span></li>`).join('')}
     </ul>
 </div>
 ${buttonsHtml}`
@@ -105,9 +105,15 @@ export class User {
         this.company = data.company;
         this.userType = data.userType;
         this.userCredential = data.userCredential;
+        // this.coworkers = {
+        //     names = {},
+        //     credentials = {},
+        //     emails = {},
+        // };
         this.coworkers = [];
         this.coworkerCredentials = {};
         this.coworkerNames = {};
+        this.coworkerEmails = {};
         this.task = [];
 
         this.getCoworkers();
@@ -131,6 +137,8 @@ export class User {
                         this.coworkers.push(coworker);
                         this.coworkerCredentials[coworker] = doc.data().userCredential;
                         this.coworkerNames[doc.data().userCredential] = coworker;
+                        this.coworkerEmails[coworker] = doc.data().email;
+
                     }
                 });
 

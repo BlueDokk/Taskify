@@ -21,6 +21,7 @@ const dataForm = {
 
 	startForm() {
 
+		// Validate if there is an active session or credential
 		this.userActive();
 		// Initialize reading fields in the form.
 		this.readFields();
@@ -194,6 +195,7 @@ const dataForm = {
 		}
 	},
 
+	// Validate if there is an active session or credential.
 	userActive() {
 		firebase.auth().onAuthStateChanged(function (user) {
 			if (user) {
